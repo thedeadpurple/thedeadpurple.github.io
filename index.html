@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeadPurple Landing</title>
+    <style>
+        /* Reset default margins and ensure the page covers the full viewport */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000; /* Black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ensure the video scales responsively while remaining centered */
+        video {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Autoplay, loop, and muted attributes ensure the video plays automatically without sound -->
+    <!-- playsinline prevents full-screen playback on mobile devices -->
+    <video autoplay loop muted playsinline>
+        <source src="DP_video_no_logo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
