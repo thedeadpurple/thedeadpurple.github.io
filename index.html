@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeadPurple Landing</title>
+    <title>Dead Purple</title>
     <style>
-        /* Reset default margins and ensure the page covers the full viewport */
+        /* Ensure body and html occupy full height */
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
-            background-color: #000; /* Black background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: #000; /* black background to match video aspect */
         }
-
-        /* Ensure the video scales responsively while remaining centered */
-        video {
+        .video-container {
+            position: relative;
             width: 100%;
-            height: auto;
-            max-height: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* maintain aspect ratio while covering the container */
+            min-width: 100%;
+            min-height: 100%;
         }
     </style>
 </head>
 <body>
-    <!-- Autoplay, loop, and muted attributes ensure the video plays automatically without sound -->
-    <!-- playsinline prevents full-screen playback on mobile devices -->
-    <video autoplay loop muted playsinline>
-        <source src="DP_video_no_logo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="video-container">
+        <video src="DP_video.mp4" autoplay loop muted playsinline controls></video>
+    </div>
 </body>
 </html>
