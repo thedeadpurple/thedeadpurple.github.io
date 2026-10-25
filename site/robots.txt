@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /site/free/thanks.html
+Sitemap: https://thedeadpurple.github.io/site/sitemap.xml
