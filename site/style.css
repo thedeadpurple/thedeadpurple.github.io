@@ -32,3 +32,4 @@ footer{border-top:1px solid var(--b);padding:32px 0;text-align:center;color:var(
 .disc{color:var(--m);font-size:.85rem;margin-top:14px}
 .sticky-shop{display:none}
 @media(max-width:640px){.sticky-shop{display:block;position:fixed;left:16px;right:16px;bottom:14px;z-index:10;text-align:center}footer{padding-bottom:90px}}
+.tcat{font-size:1.2rem;margin:26px 0 12px;color:#c9a0ff}
