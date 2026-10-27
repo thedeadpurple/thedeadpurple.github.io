@@ -30,9 +30,9 @@
 </head>
 <body>
 <section class="jtfd-hero" aria-label="James the Funeral Director">
-<video width="1280" height="720" autoplay muted loop playsinline preload="auto" poster="video/jtfd-hero-poster.jpg">
-<source src="video/jtfd-hero.webm" type="video/webm">
+<video width="1280" height="720" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture preload="auto" poster="video/jtfd-hero-poster.jpg">
 <source src="video/jtfd-hero.mp4" type="video/mp4">
+<source src="video/jtfd-hero.webm" type="video/webm">
 </video>
 <p class="sr">James the Funeral Director</p>
 </section>
@@ -262,6 +262,6 @@
 <p>© 2026 James the Funeral Director · deadpurple.com · James Galbraith</p>
 </div>
 </footer>
-<script>var v=document.querySelector(".jtfd-hero video");if(v){v.play().catch(function(){});}</script>
+<script>(function(){var v=document.querySelector(".jtfd-hero video");if(!v)return;v.muted=true;v.defaultMuted=true;v.setAttribute("muted","");var p=function(){if(v.paused){var r=v.play();if(r&&r.catch)r.catch(function(){});}};p();v.addEventListener("loadeddata",p);document.addEventListener("visibilitychange",function(){if(!document.hidden)p();});["touchstart","click","scroll"].forEach(function(e){window.addEventListener(e,p,{once:true,passive:true});});})();</script>
 </body>
 </html>
